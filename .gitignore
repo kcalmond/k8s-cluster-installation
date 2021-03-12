@@ -55,3 +55,4 @@ infrastructure/libvirt/ubuntu/x86-64/cloud_init.cfg
 __pycache__/
 *.py[cod]
 *$py.class
+play_verbose.out

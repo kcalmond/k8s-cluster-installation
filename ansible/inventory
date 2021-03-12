@@ -3,6 +3,7 @@ hackberry hostname=hackberry.almond.lan ansible_host=192.168.0.51 ansible_user=p
 strawberry hostname=strawberry.almond.lan ansible_host=192.168.0.52 ansible_user=pi
 blueberry hostname=blueberry.almond.lan ansible_host=192.168.0.53 ansible_user=pi
 blackberry hostname=blackberry.almond.lan ansible_host=192.168.0.54 ansible_user=pi
+gooseberry hostname=gooseberry.almond.lan ansible_host=192.168.0.55 ansible_user=pi
 
 [cluster:children]
 controlplane
@@ -15,11 +16,12 @@ blueberry
 
 [nodes]
 blackberry
+gooseberry
 
 [docker_cache]
 #registry hostname=registry ansible_host=192.168.1.120 ansible_user=pi
 
-; These entires are here for backward compatibility as we transition away from the old names.
+; These entries are here for backward compatibility as we transition away from the old names.
 [k8s:children]
 masters
 workers
@@ -31,3 +33,4 @@ blueberry
 
 [workers]
 blackberry
+gooseberry
